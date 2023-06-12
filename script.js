@@ -10,6 +10,13 @@ mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    getMealList();
+  }
+});
+
 
 
 // get meal list that matches with the ingredients
